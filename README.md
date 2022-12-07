@@ -23,12 +23,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./assets/images/desktop-preview.jpg)
+![](./images/desktop-preview.jpg)
 
 ### Links
 
-- Solution URL: [https://github.com/malins-cyber/news-website]
-- Live Site URL: []
+- Solution URL: [https://github.com/malins-cyber/news-landingpage]
+- Live Site URL: [https://news-landingpage.netlify.app/]
 
 ### Built with
 
@@ -40,3 +40,5 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@malins-cyber]()
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/25a7b702-d35f-4afa-89bb-f38da8f997c2/deploy-status)](https://app.netlify.com/sites/news-landingpage/deploys)
