@@ -350,7 +350,7 @@ body {
   .open_btn {
     display: none;
   }
- .header {
+  .header {
     padding: 0;
     height: 6em;
   }
@@ -495,15 +495,28 @@ body {
     z-index: 100;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.609);
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-200%);
+    transform: translateX(100%);
+    background: rgba(0, 0, 0, 0.609);
+    transition: transform .3s opacity .3s visibility .3s background-color .3s ease 1s;
+  }
+
+  .navbar.open_menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .navbar.open_menu > .list_wrapper {
+    transition: .3s ease;
+    transition-delay: 300ms;
   }
 
   .navbar .close_btn {
     position: fixed;
     top: 1rem;
+    z-index: 100;
     right: 0.9rem;
   }
 

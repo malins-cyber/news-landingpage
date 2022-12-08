@@ -39,6 +39,6 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@malins-cyber]()
+- Frontend Mentor - [@malins-cyber](https://www.frontendmentor.io/profile/malins-cyber)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/25a7b702-d35f-4afa-89bb-f38da8f997c2/deploy-status)](https://app.netlify.com/sites/news-landingpage/deploys)
