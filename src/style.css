@@ -70,6 +70,11 @@ p, span{
   width: 2.3rem;
 }
 
+.header svg:is(:hover, :focus){
+  color: 1px solid var(--clr-red);
+  cursor: pointer;
+}
+
 .list_wrapper .list_items a {
   font-size: 1.3rem;
   color: var(--clr-Very-dark-blue);
@@ -85,18 +90,13 @@ p, span{
   height: 20rem;
 }
 
-.highlight_wrapper {
-  padding: 0 1em;
-}
-
 .highlight_body {
   margin-top: 1.9rem;
-  /* padding: 1em; */
+  padding: 0 1em;
 }
 
 .highlight_body h1 {
   font-size: 5ch;
-  padding: 0 1rem;
   line-height: normal;
   font-weight: 800;
 }
@@ -106,7 +106,9 @@ p, span{
   padding: 1rem 0;
 }
 
-.highlight_body button {
+.highlight_body .read_more {
+  display: flex;
+  justify-content: center;
   width: 12em;
   padding: 1rem;
   margin-top: 1em;
@@ -118,7 +120,7 @@ p, span{
   background: var(--clr-red);
 }
 
-.highlight_body button:is(:hover, :focus) {
+.highlight_body .read_more:is(:hover, :focus) {
   transition: all 0.3s ease-in;
   cursor: pointer;
   background: var(--clr-Very-dark-blue);
@@ -138,7 +140,7 @@ p, span{
 }
 
 .highlight_update h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--clr-white);
 }
 
@@ -173,7 +175,6 @@ p, span{
   display: flex;
   margin-bottom: 2rem;
   height: 10em;
-  /* background: yellow; */
 }
 
 .related_cards img {
@@ -225,7 +226,7 @@ p, span{
   }
 
   .header .logo_wrapper {
-    width: 3rem;
+    width: 4rem;
   }
 
   .header button {
@@ -256,67 +257,62 @@ p, span{
   }
 
   .highlight_container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 28%;
     gap: 1.5rem;
-    height: 52vh;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
   }
 
   .highlight_update {
     margin: 0;
     padding: 1.5em;
-    height: 100%;
   }
 
   .highlight_body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 32% 1fr;
     margin: 0;
+    gap: 9em;
     padding: 0;
     padding-top: 1em;
-    /* align-items: center; */
-    /* background: green; */
   }
 
   .highlight_body h1 {
     padding: 0;
-    font-size: 4ch;
   }
 
   .highlight_update h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    margin-bottom: 0.6em;
   }
 
   .highlight_update h3 {
-    font-size: 1rem;
+    font-size: 1.35rem;
   }
 
   .update_body .update_cards p {
     font-size: 1rem;
+    padding-top: .9em;
   }
 
   .highlight_body p {
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding-top: 0;
     padding-bottom: 0.5em;
   }
 
   .update_body .update_cards:not(:nth-child(3)) {
-    padding-bottom: 1.5em;
-    margin-bottom: 1.5em;
+    padding-bottom: 1.8em;
+    margin-bottom: 1.8em;
   }
 
   .highlight_wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding: 0;
-    margin-top: auto;
   }
 
-  .highlight_body button {
-    width: 12em;
-    font-size: 0.9rem;
+  .highlight_body .read_more {
+    font-size: .9rem;
     padding: 0.9rem;
   }
 
@@ -329,11 +325,11 @@ p, span{
   }
 
   .related_content h4 {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
   }
 
   .related_content p {
-    font-size: 1.14rem;
+    font-size: 1.2rem;
   }
 
   .related_cards {
@@ -347,146 +343,6 @@ p, span{
 
   .related_cards .related_body {
     display: flex;
-    /* margin: 0; */
-    /* justify-content: initial; */
-  }
-}
-/*tablet screens */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .navbar .close_btn,
-  .open_btn {
-    display: none;
-  }
-  .header {
-    padding: 0;
-    height: 6em;
-  }
-
-  .header .logo_wrapper {
-    width: 3rem;
-  }
-
-  .header button {
-    display: none;
-  }
-
-  .navbar .list_wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .list_wrapper .list_items a {
-    font-size: 1.1rem;
-    color: var(--clr-Dark-grayish-blue);
-  }
-
-  .navbar .list_items {
-    padding-left: 1.5rem;
-  }
-
-  .highlight_cover {
-    height: 20em;
-    background: url(../images/image-web-3-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .highlight_container {
-    display: flex;
-    gap: 1.5rem;
-    height: 52vh;
-    margin-bottom: 3em;
-  }
-
-  .highlight_update {
-    margin: 0;
-    padding: 1.5em;
-    height: 100%;
-  }
-
-  .highlight_body {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    padding-top: 1em;
-    /* align-items: center; */
-    /* background: green; */
-  }
-
-  .highlight_body h1 {
-    padding: 0;
-    font-size: 4ch;
-  }
-
-  .highlight_update h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5em;
-  }
-
-  .highlight_update h3 {
-    font-size: 1rem;
-  }
-
-  .update_body .update_cards p {
-    font-size: 1rem;
-  }
-
-  .highlight_body p {
-    font-size: 1rem;
-    padding-top: 0;
-    padding-bottom: 0.5em;
-  }
-
-  .update_body .update_cards:not(:nth-child(3)) {
-    padding-bottom: 1.5em;
-    margin-bottom: 1.5em;
-  }
-
-  .highlight_wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0;
-    margin-top: auto;
-  }
-
-  .highlight_body button {
-    width: 12em;
-    font-size: 0.9rem;
-    padding: 0.9rem;
-  }
-
-  .related_content {
-    padding: 0;
-  }
-
-  .related_content span {
-    font-size: 2rem;
-  }
-
-  .related_content h4 {
-    font-size: 1.2rem;
-  }
-
-  .related_content p {
-    font-size: 1.14rem;
-  }
-
-  .related_cards {
-    margin: 0;
-    height: 9em;
-  }
-
-  .related_cards img {
-    width: 10em;
-  }
-
-  .related_cards .related_body {
-    display: flex;
-    /* margin: 0; */
-    /* justify-content: initial; */
   }
 }
 
@@ -506,7 +362,7 @@ p, span{
     visibility: hidden;
     transform: translateX(100%);
     background: rgba(0, 0, 0, 0.609);
-    transition: transform .3s opacity .3s visibility .3s background-color .3s ease 1s;
+    transition: transform .3s ease opacity .3s ease visibility .3s ease background-color .3s ease 1s;
   }
 
   .navbar.open_menu {
